@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Змейка</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+    <header class="hud">
+      <div class="hud__item">
+        <span class="hud__label">Счёт</span>
+        <span class="hud__value" id="score">0</span>
+      </div>
+      <h1 class="title">Змейка</h1>
+      <div class="hud__item">
+        <span class="hud__label">Рекорд</span>
+        <span class="hud__value" id="best">0</span>
+      </div>
+    </header>
+
+    <div class="board" id="board">
+      <canvas id="canvas" width="480" height="480"></canvas>
+
+      <div class="overlay" id="overlay">
+        <h2 class="overlay__title" id="overlayTitle">Змейка</h2>
+        <p class="overlay__text" id="overlayText">
+          Управление: стрелки или WASD.<br />
+          Собирайте еду и не врезайтесь в стены и в себя.
+        </p>
+        <button class="btn" id="startBtn" type="button">Играть</button>
+      </div>
+    </div>
+
+    <div class="touch" id="touch">
+      <button class="touch__btn" data-dir="up" type="button" aria-label="Вверх">▲</button>
+      <button class="touch__btn" data-dir="left" type="button" aria-label="Влево">◀</button>
+      <button class="touch__btn" data-dir="down" type="button" aria-label="Вниз">▼</button>
+      <button class="touch__btn" data-dir="right" type="button" aria-label="Вправо">▶</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
